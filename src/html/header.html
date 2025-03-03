@@ -1,11 +1,77 @@
 <header class="header">
   <div class="header__container">
-    <a href="#" class="header__logo logo"></a>
-    <nav class="header__menu menu">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">Link</a></li>
+    <div class="header__top header-top">
+      <ul class="header-top__menu">
+        <li class="header-top__li">
+          <a href="#">Каталог</a>
+        </li>
+        <li class="header-top__li">
+          <a href="#">Бренды</a>
+        </li>
       </ul>
-    </nav>
-    <!-- @@include('./icon-menu.html', {}) -->
+      <form action="#" class="header-top__search search-head" data-da=".header__bottom, 1175, first">
+        <div class="search-head__item">
+          <input type="text" placeholder="Искать" id="search-head" name="search-head__input" class="search-head__input">
+        </div>
+        <button class="search-head__button">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.6" cy="7.6" r="6.6" stroke="white" stroke-width="2" />
+            <path d="M12.3496 13.3L18.0496 19" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </form>
+      <div class="header-top__city">г. Комсомольск-на-Амуре</div>
+      <div class="header-top__item-row">
+        <a href="#" class="header-top__item">
+          <picture>
+            <source media="(max-width: 1175px)" srcset="@img/header-top-item1-white.svg">
+            <img src="@img/header-top-item1.svg" alt="">
+          </picture>
+        </a>
+        <a href="#" class="header-top__item">
+          <div class="header-top__item-number">25</div>
+          <picture>
+            <source media="(max-width: 1175px)" srcset="@img/header-top-item2-white.svg">
+            <img src="@img/header-top-item2.svg" alt="">
+          </picture>
+        </a>
+        <a href="#" class="header-top__item">
+          <div class="header-top__item-number">30</div> 
+          <picture>
+            <source media="(max-width: 1175px)" srcset="@img/header-top-item3-white.svg">
+            <img src="@img/header-top-item3.svg" alt="">
+          </picture>
+        </a>
+      </div>
+      @@include('./icon-menu.html', {})
+    </div>
+    <div class="header__bottom">
+      <a href="#" class="header__logo logo" data-da=".header-top, 1175, first">
+        <img src="@img/logo-header.svg" alt="">
+      </a>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link">Решения</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Проекты</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:84956614031" class="header__number">8 (495) 661-40-31</a>
+        <a href="mailto:sales@dixten.ru" class="header__email">sales@dixten.ru</a>
+      </div>
+      <div class="header__social">
+        <a href="#">
+          <img src="@img/icon-tg.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="@img/icon-wh.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+
   </div>
 </header>

@@ -1,18 +1,18 @@
-$mainOffset: 15; // отступы безопасности для контейнера
+$mainOffset: 20; // отступы безопасности для контейнера
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
-$containerWidth: 1160; // ширина контейнера из макета
+$containerWidth: 1400; // ширина контейнера из макета
 $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина контейнера с учетом padding слева и справа
 
 $headerHeight: 100;
 $footerHeight: 100;
 
 :root {
-  --bs-font-family: 'Inter', sans-serif; // Семейство шрифта по умолчанию
+  --bs-font-family: 'Montserrat', sans-serif; // Семейство шрифта по умолчанию
   --bs-font-size: 16px; // Размер шрифта по умолчанию
   --bs-font-weight: 400; // Жирность шрифта по умолчанию
   --bs-line-height: 1; // Базовая высота шрифта
-  --bs-font-color: #222; // Цвет шрифта по умолчанию
+  --bs-font-color: #333d61; // Цвет шрифта по умолчанию
   --bs-transition: .3s ease-in-out;
   --bs-radius: 10px;
 
@@ -26,4 +26,16 @@ $footerHeight: 100;
   --hover-shadow: 0 0 5px 0 rgba(#000, 10%),
                   0 0 10px 0 rgba(#000, 10%),
                   0 0 15px 0 rgba(#000, 10%);
+
+
+
+
+  --light-blue: #536bbd;
+  --ssylki: #5392c0;
+  --svetlye-plashki: #edf6ff;
+  --ikonki: #c5e6ff;
+  --menyu-vydelenie: #92bedf;
+  --ramka-poley: #c5d1df;
+  --temnye-plashki: #112942;
+  --tekst: #333d61;
 }
