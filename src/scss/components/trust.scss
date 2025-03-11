@@ -1,0 +1,64 @@
+.trust {
+    @include adaptiveClamp(padding-top, 180, 90);
+
+    &__container {
+    }
+
+    &__content {
+        border-radius: 18px;
+        background: var(--svetlye-plashki);
+        @include adaptiveClamp(padding-top, 47, 25);
+        @include adaptiveClamp(padding-left, 50, 20);
+        @include adaptiveClamp(padding-right, 50, 20);
+        @include adaptiveClamp(padding-bottom, 67, 30);
+        overflow: hidden;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(40);
+        @include adaptiveClamp(margin-bottom, 60, 30);
+    }
+
+    &__title {
+    }
+
+    &__slider-buttons {
+    }
+
+    &__slider-prev {
+    }
+
+    &__slider-next {
+    }
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        img {
+            height: auto;
+            max-height: rem(80);
+            @include adaptiveClamp(max-height, 80, 50);
+            width: 100%;
+        }
+    }
+}
+.button-slider-row {
+}
+.button-slider {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}

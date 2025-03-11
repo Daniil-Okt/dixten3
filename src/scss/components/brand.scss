@@ -1,0 +1,160 @@
+.brand {
+    @include adaptiveClamp(padding-top, 150, 90);
+
+    
+    &__container {
+        display: flex;
+        justify-content: center;
+        @media(max-width:768px){
+            display: block;
+        }
+    }
+    &__title {
+        display: none;
+        @include adaptiveClamp(margin-bottom, 50, 18);
+        @media(max-width:768px){
+            display: block;
+        }
+    }
+
+    &__content {
+        position: relative;
+        @media(min-width:769px){
+            @include adaptiveClamp(width, 665, 200);
+        }
+        @media(max-width:768px){
+            width: 100%;
+        }
+    }
+
+    &__img {
+        @include adaptiveClamp(width, 665, 200);
+        img {
+            width: 100%;
+        }
+        @media(max-width:768px){
+            display: none;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        h3 {
+            font-weight: 700;
+            @include adaptiveClamp(font-size, 77, 33);
+            color: var(--tekst);
+            @media(max-width:768px){
+                @include adaptiveClamp(font-size, 67, 33);
+            }
+        }
+        p {
+            line-height: 150%;
+            color: var(--tekst);
+            @include adaptiveClamp(font-size, 16, 10);
+            @media(max-width:768px){
+                @include adaptiveClamp(font-size, 16, 12);
+                line-height: 120%;
+                color: #172b47;
+            }
+        }
+
+
+        &.one {
+            @media(min-width:769px){
+                @include adaptiveClamp(max-width, 337, 193);
+                position: absolute;
+                @include adaptiveClamp(top, 202, 60);
+                @include adaptiveClamp(right, 640, 70);
+            }
+            @media(max-width:768px){
+                margin-bottom: rem(98);
+                @include adaptiveClamp(max-width, 387, 174);
+            }
+            .brand__item-img {
+                width: rem(39);
+                @include adaptiveClamp(width, 69, 39);
+            }
+        }
+        &.two {
+            @media(min-width:769px){
+                @include adaptiveClamp(max-width, 337, 93);
+                position: absolute;
+                @include adaptiveClamp(top, 40, 10);
+                @include adaptiveClamp(left, 619, 190);
+            }
+            @media(max-width:768px){
+                margin-bottom: rem(67);
+                margin-left: auto;
+                @include adaptiveClamp(max-width, 387, 213);
+            }
+
+            .brand__item-img {
+                width: rem(57);
+                @include adaptiveClamp(width, 87, 57);
+            }
+        }
+        &.three {
+            @media(min-width:769px){
+                @include adaptiveClamp(max-width, 337, 163);
+                position: absolute;
+                @include adaptiveClamp(top, 510, 160);
+                @include adaptiveClamp(left, 582, 190);
+            }
+            @media(max-width:768px){
+                @include adaptiveClamp(max-width, 387, 189);
+            }
+
+            .brand__item-img {
+                width: rem(65);
+                @include adaptiveClamp(width, 95, 65);
+            }
+        }
+    }
+
+
+    &__item-head {
+        display: flex;
+        align-items: center;
+        gap: rem(14);
+        margin-bottom: rem(10);
+    }
+
+    &__item-img {
+        @media(min-width:769px){
+            display: none;
+        }
+    }
+
+
+    &__fon-one {
+        position: absolute;
+        top: rem(-130);
+        left: rem(-24.4);
+        @include adaptiveClamp(width, 500, 289);
+        img {
+            @include adaptiveClamp(width, 500, 289);
+        }
+
+
+        @media(min-width:769px){
+            display: none;
+        }
+        @media(max-width:670px){
+            top: rem(-80);
+        }
+    }
+    &__fon-two {
+        @include adaptiveClamp(top, 300, 270);
+        right: rem(-20);
+        position: absolute;
+        @include adaptiveClamp(width, 350, 220.6);
+        img {
+            @include adaptiveClamp(width, 350, 220.6);
+        }
+
+
+        @media(min-width:769px){
+            display: none;
+        }
+    }
+}

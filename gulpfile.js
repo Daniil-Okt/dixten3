@@ -34,6 +34,8 @@ function watcher() {
   gulp.watch(filePaths.watch.images,handleImages);
 }
 
+
+
 /**
  * Последовательная обработка шрифтов
  * */

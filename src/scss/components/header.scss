@@ -133,7 +133,9 @@
     display: flex;
     @include adaptiveClamp(gap, 45, 10);
     @media(max-width:768px){
-      display: none;
+      // display: none;
+      flex-direction: column;
+      margin-bottom: rem(33);
     }
   }
 
@@ -153,6 +155,20 @@
         &:hover {
           color: var(--menyu-vydelenie);
         }
+      }
+    }
+
+    @media(max-width:768px){
+      a {
+        display: block;
+        color: var(--light-blue);
+        text-align: right;
+        width: 100%;
+        @include adaptiveClamp(font-size, 17, 16);
+      }
+      &:first-child {
+        @include adaptiveClamp(padding-bottom, 45, 10);
+        border-bottom: 1px solid var(--light-blue);
       }
     }
   }
@@ -274,14 +290,15 @@
   }
 }
 
-.logo {
-}
 .menu {
   margin-left: rem(51);
   @media(max-width:1270px){
     margin-left: 0;
   }
   @media(max-width:1175px){
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     background: #fff;
     padding-top: rem(120);
@@ -292,9 +309,14 @@
     top: 0;
     z-index: 200;
     z-index: -1;
+    max-width: rem(400);
     transition: all 0.5s ease  0s;
+    box-shadow: 0px 2px 5px rgba(#000, 10%);
     @media(max-width:650px){
       padding-top: rem(180);
+    }
+    @media(max-width:550px){
+        max-width: 100%;
     }
 
     .menu-open & {
@@ -309,6 +331,7 @@
         padding-top: rem(30);
         padding-left: rem(20);
         padding-right: rem(20);
+        padding-bottom: rem(25);
         flex-direction: column;
         align-items: end;
         @include adaptiveClamp(gap, 12, 8);
@@ -331,6 +354,9 @@
     &:hover {
       color: var(--menyu-vydelenie);
     }
+    &.active {
+      color: var(--menyu-vydelenie);
+    }
 
     @media(max-width:1175px){
       display: inline-block;
@@ -340,6 +366,47 @@
       padding-bottom: rem(10);
     }
   }
+
+  &__bottom {
+
+  }
+}
+
+.bottom-menu {
+  display: none;
+  @media(max-width:1175px){
+    display: block;
+  }
+  margin-top: auto;
+  background: var(--temnye-plashki);
+  padding-top: rem(36);
+  padding-bottom: rem(16);
+  padding-left: rem(20);
+  padding-right: rem(20);
+
+  &__button {
+    margin-bottom: rem(35);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    p, a {
+      font-weight: 500;
+      font-size: rem(10);
+      line-height: 110%;
+      color: #fff;
+
+      &.big {
+        margin-top: rem(14);
+        font-size: rem(12);
+      }
+    }
+
+  }
+}
+.big {
 }
 
 

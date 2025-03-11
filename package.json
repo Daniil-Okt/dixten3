@@ -74,6 +74,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "simple-parallax-js": "^6.0.1",
     "swiper": "^8.4.5"
   }
 }

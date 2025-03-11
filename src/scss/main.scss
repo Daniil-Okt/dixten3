@@ -22,8 +22,8 @@
 * Библиотеки
 * раскомментировать для использования
 */
-// @import 'libs/aos';
-// @import 'libs/swiper';
+@import 'libs/aos';
+@import 'libs/swiper';
 
 /**
 * Подключение custom scrollbar для всего сайта
@@ -51,5 +51,21 @@
 * Подключение стилей отдельных блоков и секций
 */
 @import 'components/header';
+@import 'components/about';
+@import 'components/object';
+@import 'components/solving';
+@import 'components/projects';
+@import 'components/trust';
+@import 'components/reviews';
+@import 'components/consul';
+@import 'components/catalog';
+@import 'components/brand';
+@import 'components/connect';
 
-@import 'components/footer';
+
+
+
+
+
+
+// @import 'components/footer';
