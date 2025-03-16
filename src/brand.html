@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'DIXTEN - Бренды'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+        <div class="about about-two about-brand">
+            <div class="about__container">
+                <div class="about__content">
+                    <div class="about__body">
+                        <div class="about__crumb crumb">
+                            <a href="index.html">Главная</a>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L1 11" stroke="#8894AF" stroke-linecap="round" />
+                            </svg>
+                            <a href="index.html">Бренды</a>
+                        </div>
+                        <h1 class="about__title">
+                            В нашем портфеле брендов более 880 торговых марок
+                        </h1>
+                        <div class="about-brand__list">
+                            <div class="about-brand__list-item">
+                                <h3>90%</h3>
+                                <p>всех брендов, которые можно найти в РФ</p>
+                            </div>
+                            <div class="about-brand__list-item">
+                                <h3>от 50+</h3>
+                                <p>самых топовых поставщиков и производителей</p>
+                            </div>
+                        </div>
+                        <div class="about__button-row" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="about__button button" data-type="popup-form-1"><span>Рассчитать проект на ТОП брендах</span></div>
+                        </div>
+                    </div>
+                    <div class="about-brand__img" data-da=".about__body, 780, 2">
+                        <img src="@img/about/about-brand-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('html/brand-direct.html')
+
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>

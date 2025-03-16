@@ -7,6 +7,7 @@
         position: relative;
         background: linear-gradient(0deg, rgba(211, 234, 255, 0.5) 0%, rgba(246, 250, 255, 0.5) 57%);
         border-radius: 28px;
+        overflow: hidden;
         @include adaptiveClamp(padding-top, 86, 28);
         @include adaptiveClamp(padding-left, 66, 20);
         @include adaptiveClamp(padding-right, 66, 20);
@@ -15,8 +16,36 @@
             margin-left: rem(-20);
             margin-right: rem(-20);
         }
-    }
 
+        .about-two & {
+            @include adaptiveClamp(padding-top, 34, 20);
+            @include adaptiveClamp(padding-bottom, 89, 39);
+        }
+    }
+    &__fon {
+        position: absolute;
+        bottom: rem(120);
+        right: rem(15);
+        @include adaptiveClamp(width, 547, 200);
+        height: auto;
+        img {
+            // @include adaptiveClamp(width, 547, 400);
+        }
+        @media(max-width:550px){
+            @include adaptiveClamp(width, 547, 252);
+            right: 50%;
+            transform: translateX(50%);
+            @include adaptiveClamp(bottom, 275, 238);
+
+            img {
+                @include adaptiveClamp(width, 547, 252);
+            }
+
+            @media(max-width:450px){
+                @include adaptiveClamp(bottom, 350, 238);
+            }
+        }
+    }
     &__body {
         position: relative;
         z-index: 3;
@@ -27,10 +56,34 @@
         @media(max-width:750px){
             max-width: 100% !important;
         }
+
+        .about-two & {
+            @include adaptiveClamp(max-width, 762, 350);
+            @media(max-width:1000px){
+                max-width: 100% !important;
+            }
+        }
+
+        .about-brand & { 
+            @include adaptiveClamp(max-width, 690, 350);
+            @media(max-width:1000px){
+                @include adaptiveClamp(margin-right, 200, 350);
+            }
+            @media(max-width:780px){
+                margin-right: 0 !important;
+            }
+        }
     }
 
     &__title {
         @include adaptiveClamp(margin-bottom, 12, 10);
+
+        .about-brand & { 
+            @include adaptiveClamp(margin-bottom, 107, 50);
+            @media(max-width:780px){
+                @include adaptiveClamp(margin-bottom, 1, 0);
+            }
+        }
     }
 
     &__text-up {
@@ -42,6 +95,13 @@
         @media(max-width:750px){
             font-weight: 600;
             @include adaptiveClamp(margin-bottom, 600, 286);
+        }
+
+        .about-two & {
+            @include adaptiveClamp(margin-bottom, 70, 56);
+            @media(max-width:750px){
+                @include adaptiveClamp(margin-bottom, 70, 56);
+            }
         }
     }
 
@@ -60,6 +120,18 @@
         @media(max-width:750px){
             display: none;
         }
+
+        .about-two & {
+            @include adaptiveClamp(margin-bottom, 92, 32);
+            @media(max-width:750px){
+                display: grid;
+            }
+            @media(max-width:450px){
+                display: flex;
+                flex-direction: column;
+                @include adaptiveClamp(row-gap, 20, 11);
+            }
+        }
     }
 
     &__list-item {
@@ -76,12 +148,25 @@
     }
 
     &__button-row {
+        .about-brand & {
+            @media(max-width:780px){
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
     &__button {
         max-width: rem(274);
         @media(max-width:480px){
             max-width: 100%;
+        }
+
+        .about-brand & {
+            max-width: rem(372);
+            @media(max-width:480px){
+                max-width: 100%;
+            }
         }
     }
 
@@ -189,6 +274,136 @@
             // }
         }
     }
+
+    &__crumb {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        @include adaptiveClamp(margin-bottom, 30, 18);
+
+        svg {
+            @include adaptiveClamp(margin-top, 2.5, 1);
+            @include adaptiveClamp(width, 7, 5);
+            height: auto;
+        }
+
+        a {
+            font-weight: 500;
+            @include adaptiveClamp(font-size, 14, 11);
+            color: #8894af;
+            transition: all 0.3s ease  0s;
+            &:hover {
+                color: #333d61;
+            }
+            &:last-child {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        @include adaptiveClamp(bottom, 89, 39);
+        right: rem(35);
+        overflow: hidden;
+        @include adaptiveClamp(width, 682, 0);
+        @media(max-width:1000px){
+            position: relative;
+            bottom: auto !important;
+            right: auto;
+            @include adaptiveClamp(margin-bottom, 50, 24);
+            width: 100% !important;
+            @include adaptiveClamp(max-width, 882, 300);
+        }
+        @media(max-width:550px){
+            max-width: 100% !important;
+        }
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__pagin-row {
+        @include adaptiveClamp(margin-top, 41, 13);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__pagintion.swiper-pagination {
+        width: 100% !important;
+    }
 }
-.button {
+
+.about-brand {
+
+    &__list {
+        @include adaptiveClamp(margin-bottom, 89, 30);
+        display: flex;
+        @include adaptiveClamp(gap, 100, 16);
+        @include adaptiveClamp(padding-left, 15, 11);
+        @include adaptiveClamp(padding-right, 15, 11);
+        max-width: rem(450);
+        @include adaptiveClamp(max-width, 450, 280);
+
+        @media(max-width:780px){
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media(max-width:450px){
+            margin-top: rem(22);
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include adaptiveClamp(gap, 20, 14);
+ 
+        h3 {
+            font-weight: 700;
+            @include adaptiveClamp(font-size, 45, 24);
+            text-align: center;
+            color: #333d61;
+        }
+        p {
+            font-weight: 700;
+            @include adaptiveClamp(font-size, 16, 12);
+            text-align: center;
+            color: var(--tekst);
+            line-height: 120%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        @include adaptiveClamp(width, 594, 258);
+        top: rem(4);
+        right: rem(40);
+        img {
+            @include adaptiveClamp(width, 594, 258);
+            height: auto;
+        }
+
+        @media(max-width:1240px){
+            right: rem(-30);
+        }
+        @media(max-width:1000px){
+            top: rem(40);
+        }
+        @media(max-width:780px){
+            position: relative;
+            top: auto;
+            right: auto;
+            @include adaptiveClamp(left, 20, 10);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }

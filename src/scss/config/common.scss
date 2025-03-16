@@ -2,6 +2,16 @@
 body {
     color: var(--tekst);
 }
+.page {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 0 0 30px 30px;
+    @include adaptiveClamp(padding-bottom, 150, 90);
+    @media(max-width:550px){
+        border-radius: 0 0 20px 20px;
+    }
+}
 h1 {
     @include adaptiveClamp(font-size, 45, 22);
     font-weight: 700;
@@ -33,6 +43,7 @@ h2 {
     overflow: hidden;
     transition: opacity 0.3s ease  0s;
     span {
+        position: relative;
         z-index: 1;
     }
     &::before {
@@ -94,6 +105,16 @@ h2 {
     }
     .swiper-pagination-bullet-active-prev-prev, .swiper-pagination-bullet-active-prev, .swiper-pagination-bullet-active-next-next, .swiper-pagination-bullet-active-next {
         transform: scale(1) !important;
+    }
+
+    &.black-blue {
+        .swiper-pagination-bullet {
+            background: #d5d6dc;
+            border: none;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--light-blue);;
+        }
     }
 }
 

@@ -112,7 +112,11 @@
             &._6fr {
                 grid-column: 6 span;
             } 
-    
+            
+            .active-sort & {
+                grid-column: 4 span !important;
+                align-items: start;
+            }
         }
         @media(max-width:800px){
             @include adaptiveClamp(min-height, 321, 176);

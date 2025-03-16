@@ -11,7 +11,9 @@
         <div data-observ></div>
         @@include('html/about.html')
         @@include('html/object.html')
-        @@include('html/solving.html')
+        @@include('html/solving.html', {
+          'title': 'Готовые решения под любую задачу'
+        })
         @@include('html/projects.html')
         @@include('html/trust.html')
         @@include('html/reviews.html')
@@ -23,7 +25,7 @@
         
       </main>
 
-      <!-- @@include('html/footer.html') -->
+      @@include('html/footer.html')
     </div>
 
     @@include('html/popup-example.html')

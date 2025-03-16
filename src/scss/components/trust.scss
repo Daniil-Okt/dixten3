@@ -12,6 +12,12 @@
         @include adaptiveClamp(padding-right, 50, 20);
         @include adaptiveClamp(padding-bottom, 67, 30);
         overflow: hidden;
+
+        .trust-two & {
+            padding: 0 !important;
+            background: none;
+            border-radius: 0;
+        }
     }
 
     &__head {
@@ -19,6 +25,7 @@
         align-items: center;
         justify-content: space-between;
         gap: rem(40);
+        @include adaptiveClamp(gap, 40, 16);
         @include adaptiveClamp(margin-bottom, 60, 30);
     }
 
@@ -50,8 +57,12 @@
             height: auto;
             max-height: rem(80);
             @include adaptiveClamp(max-height, 80, 50);
-            width: 100%;
+            width: auto;
+            max-width: 100%;
         }
+    }
+    &__bottom {
+
     }
 }
 .button-slider-row {

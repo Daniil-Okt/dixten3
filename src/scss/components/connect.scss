@@ -1,6 +1,8 @@
 .connect {
     @include adaptiveClamp(padding-top, 150, 90);
-    @include adaptiveClamp(padding-bottom, 150, 90);
+ 
+
+
     &__container {
     }
 
@@ -83,7 +85,9 @@
             grid-template-columns: 1fr;
         }
     }
-
+    &__button {
+        width: 100%;
+    }
 }
 
 

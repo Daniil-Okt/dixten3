@@ -8,7 +8,7 @@
  */
 import MousePRLX from './libs/parallax-mouse'
 import AOS from 'aos'
-import Swiper, { Navigation, Pagination, Autoplay, Grid } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, Grid, FreeMode } from 'swiper';
 
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
@@ -140,10 +140,37 @@ maskTel()
 
 /* Инициализация  swiper =================================================================================
 */
+const aboutSlider = new Swiper('.about__slider', {
+	speed: 1400,
+	spaceBetween: 10,
+	slidesPerView: 1,
+	modules: [Pagination, FreeMode],
+	freeMode: true,
+	initialSlide: 2,
+	loop: true,
+	autoplay: {
+		delay: 2500,
+		stopOnLastSlide: false,
+		disableOnIteration: false,
+	},
+	pagination: {
+		    el: ".about__pagination",
+		    dynamicBullets: true,
+		    clickable: true,
+		  },
+	breakpoints: {
+		801: {
+			freeMode: false,
+		},
+	}
+  });
+
 const objectSlider = new Swiper('.object__slider', {
   speed: 1400,
   spaceBetween: 10,
   slidesPerView: 'auto',
+  modules: [FreeMode],
+  freeMode: true
 });
 
 const solvingSlide = new Swiper('.solving__slider', {
@@ -151,7 +178,8 @@ const solvingSlide = new Swiper('.solving__slider', {
 	spaceBetween: 10,
 	slidesPerView: 2, // Количество слайдов в ряду
 	slidesPerGroup: 2, // Прокручиваем по 2 слайда за раз
-	modules: [Autoplay, Navigation, Pagination, Grid],
+	modules: [Autoplay, Navigation, Pagination, Grid, FreeMode],
+	freeMode: true,
 	grid: {
 		rows: 2,
 		fill: 'row', // Заполнение по строкам
@@ -187,6 +215,7 @@ const solvingSlide = new Swiper('.solving__slider', {
 			spaceBetween: 0,
 			grid: {
 			rows: 1, // На экранах шире 800px возвращаемся к одной строке
+			freeMode: false
 			},
 		}
 	},
@@ -198,7 +227,8 @@ const projectSlider = new Swiper('.projects__slider', {
 	slidesPerView: 1.25, // Количество слайдов в ряду
 	slidesPerGroup: 1, // Прокручиваем по 2 слайда за раз
 	initialSlide: 2,
-	modules: [Autoplay, Navigation, Pagination, Grid],
+	modules: [Autoplay, Navigation, Pagination, Grid, FreeMode],
+	freeMode: true,
 	grid: {
 		rows: 1,
 		fill: 'row', // Заполнение по строкам
@@ -249,11 +279,15 @@ const projectSlider = new Swiper('.projects__slider', {
 				dynamicBullets: false,
 			},
 		},
+		801: {
+			reeMode: false,
+		},
 		1151: {
 			slidesPerView: 4,
 			slidesPerGroup: 2, // Прокручиваем по 1 слайду за раз
 			spaceBetween: 21,
 			initialSlide: 0,
+			freeMode: false,
 			grid: {
 				rows: 2,
 				fill: 'row',
@@ -265,44 +299,81 @@ const projectSlider = new Swiper('.projects__slider', {
 	},
 });
 
-
 const trustSlider = new Swiper('.trust__slider', {
-  speed: 800,
-  spaceBetween: 16,
-  slidesPerView: 2,
-  modules: [Autoplay, Navigation],
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    stopOnLastSlide: false,
-    disableOnIteration: false,
-  },
-  navigation: {
-    prevEl: ".trust__slider-prev",
-    nextEl: ".trust__slider-next"
-  },
-  breakpoints: {
-	481: {
+	speed: 800,
+	spaceBetween: 16,
+	slidesPerView: 2,
+	modules: [Autoplay, Navigation, FreeMode, Pagination],
+	freeMode: true,
+	loop: true,
+	autoplay: {
+	  delay: 2500,
+	  stopOnLastSlide: false,
+	  disableOnIteration: false,
+	  // Отключаем автоплей по умолчанию
+	  enabled: false, // Автоплей изначально выключен
+	},
+	navigation: {
+	  prevEl: ".trust__slider-prev",
+	  nextEl: ".trust__slider-next"
+	},
+	pagination: {
+		    el: ".trust__pagination",
+		    dynamicBullets: true,
+		    clickable: true,
+		  },
+	breakpoints: {
+	  481: {
 		slidesPerView: 3,
 		spaceBetween: 24,
+	  },
+	  601: {
+		slidesPerView: 4,
+		spaceBetween: 24,
+	  },
+	  801: {
+		freeMode: false,
+		},
+	  1001: {
+		slidesPerView: 5,
+		spaceBetween: 48,
+		freeMode: false,
+	  }
 	},
-    601: {
-      slidesPerView: 4,
-      spaceBetween: 24,
-  	},
-    1001: {
-        slidesPerView: 5,
-        spaceBetween: 48,
-    }
-  },
-});
+  });
+  
+// Функция для включения автоплея, когда слайдер виден
+function startAutoplayWhenVisible(slider) {
+	const observer = new IntersectionObserver(
+	  (entries) => {
+		entries.forEach((entry) => {
+		  if (entry.isIntersecting) {
+			slider.autoplay.start();
+		  } else {
+			slider.autoplay.stop();
+		  }
+		});
+	  },
+	  {
+		threshold: 0.5,
+	  }
+	);
 
+	const sliderContainer = document.querySelector('.trust__slider');
+	if (sliderContainer) {
+	  observer.observe(sliderContainer);
+	}
+}
+
+// Запускаем наблюдение за слайдером
+startAutoplayWhenVisible(trustSlider);
 
 const reviewsSlider = new Swiper('.reviews__slider', {
-  speed: 800,
+  speed: 1400,
   spaceBetween: 16,
   slidesPerView: 1,
-  modules: [Autoplay, Navigation, Pagination],
+  modules: [Autoplay, Navigation, Pagination, FreeMode],
+  freeMode: true,
   loop: true,
   initialSlide: 2,
   navigation: {
@@ -320,16 +391,73 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 		spaceBetween: 16,
 	},
     601: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+		slidesPerView: 2,
+		spaceBetween: 20,
   	},
+	801: {
+		freeMode: false,
+		},
     1051: {
         slidesPerView: 3,
         spaceBetween: 20,
+		freeMode: false,
     }
   },
 });
 
+const swiper = new Swiper('.brand-content__slider', {
+  speed: 1400,
+  spaceBetween: 30,
+  slidesPerView: 1.55,
+  modules: [Autoplay, Navigation, Pagination, FreeMode],
+  initialSlide: 0,
+  navigation: {
+    prevEl: ".reviews__button-slider-prev",
+    nextEl: ".reviews__button-slider-next"
+  },
+  pagination: {
+    el: ".brand-content__pagintion",
+    clickable: true,
+  },
+  breakpoints: {
+	466: {
+		slidesPerView: 2,
+	},
+	801: {
+		reeMode: false,
+	},
+    951: {
+        slidesPerView: 2,
+		reeMode: false
+        // spaceBetween: 30,
+    }
+  },
+});
+
+const brandContentLogoSlider = new Swiper('.brand-content__logo-slider', {
+  speed: 1400,
+  spaceBetween: 16,
+  slidesPerView: 3,
+  modules: [Autoplay, Navigation, Pagination],
+  loop: true,
+  initialSlide: 1,
+  autoplay: {
+    delay: 2500,
+    stopOnLastSlide: false,
+    disableOnIteration: false,
+  },
+
+  breakpoints: {
+    500: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+  	},
+    1050: {
+        slidesPerView: 6,
+        spaceBetween: 48,
+    }
+  },
+});
 
 // const swiper = new Swiper('.swiper', {
 //   speed: 800,
@@ -439,13 +567,10 @@ if (buttonGridSolving && sliderSolvingBlock) {
 const buttonsSolving = document.querySelectorAll('.solving__menu-item');
 const slidesSuttonsSolving = document.querySelectorAll('.solving__slide');
 const sliderWrapper = document.querySelector('.solving__slider .swiper-wrapper'); // Контейнер слайдов
-
-// Массив для хранения скрытых слайдов
+// Массив для хранения 
 let hiddenSlides = [];
-
-// Сохраняем изначальный порядок слайдов
+// Изначальный порядок слайдов
 const initialSlidesOrder = Array.from(slidesSuttonsSolving);
-
 buttonsSolving.forEach(button => {
   button.addEventListener('click', () => {
     // Удаляем класс active у всех кнопок
@@ -482,9 +607,15 @@ buttonsSolving.forEach(button => {
         sliderWrapper.appendChild(slide);
       });
 
+      // Удаляем класс active-sort, так как сортировка неактивна
+      sliderWrapper.classList.remove('active-sort');
+
       solvingSlide.update(); // Обновляем Swiper
       return;
     }
+
+    // Добавляем класс active-sort, так как сортировка активна
+    sliderWrapper.classList.add('active-sort');
 
     // Скрываем слайды и удаляем их из DOM
     slidesSuttonsSolving.forEach(slide => {

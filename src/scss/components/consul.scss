@@ -89,6 +89,7 @@
     }
 
     &__button {
+        width: 100%;
         @media(max-width:680px){
             margin-top: rem(14);
         }

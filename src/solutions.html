@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'DIXTEN - Готовые решения'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+        <div class="about about-two">
+            <div class="about__container">
+                <div class="about__content">
+                    <div class="about__fon">
+                        <img src="@img/about/about-fon.png" alt="">
+                    </div>
+                    <div class="about__body">
+                        <div class="about__crumb crumb">
+                            <a href="index.html">Главная</a>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L1 11" stroke="#8894AF" stroke-linecap="round" />
+                            </svg>
+                            <a href="index.html">Готовые решения</a>
+                        </div>
+                        <h1 class="about__title">
+                            Готовые решения (комплекты) под любую задачу
+                        </h1>
+                        <p class="about__text-up">
+                            для государственных учреждений и бизнеса
+                        </p>
+                        <ul class="about__list">
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>Проверенные решения</span>
+                            </li>
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>Выгодные цены</span>
+                            </li>
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>Гибкие возможности</span>
+                            </li>
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>КП за 3 часа</span>
+                            </li>
+                        </ul>
+                        <div class="about__button-row" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="about__button button" data-type="popup-form-1"><span>Подобрать решение</span></div>
+                        </div>
+                    </div>
+                    <div class="about__slider" data-da=".about__body, 1000, 3">
+                        <div class="about__wrapper swiper-wrapper">
+                            <div class="about__slide swiper-slide">
+                                <img src="@img/about/about-slide1.png" alt="">
+                            </div>
+                            <div class="about__slide swiper-slide">
+                                <img src="@img/about/about-slide1.png" alt="">
+                            </div>
+                            <div class="about__slide swiper-slide">
+                                <img src="@img/about/about-slide1.png" alt="">
+                            </div>
+                            <div class="about__slide swiper-slide">
+                                <img src="@img/about/about-slide1.png" alt="">
+                            </div>
+                            <div class="about__slide swiper-slide">
+                                <img src="@img/about/about-slide1.png" alt="">
+                            </div>
+                            <div class="about__slide swiper-slide">
+                                <img src="@img/about/about-slide1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="about__pagin-row">
+                            <div class="about__pagination black-blue swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('html/solving.html', {
+            'title': 'Основные направления'
+        })
+        <div class="trust trust-two">
+            <div class="trust__container">
+                <div class="trust__content" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="trust__head">
+                        <h2 class="trust__title">
+                            Проверенные бренды
+                        </h2>
+                        <div class="trust__slider-buttons button-slider-row">
+                            <div class="trust__slider-prev button-slider">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.68652 1.94092L2.31372 9.31372L9.68652 16.6865" stroke="#333D61" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="trust__slider-next button-slider">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.31348 16.0591L8.68628 8.68628L1.31348 1.31348" stroke="#333D61" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__slider">
+                        <div class="trust__wrapper swiper-wrapper">
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img1.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img2.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img3.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img4.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img5.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img6.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img7.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img8.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img9.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img10.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img11.svg" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img12.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img13.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img14.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img15.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img16.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img17.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img18.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img19.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img20.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img21.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img22.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img23.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img24.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img25.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img26.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img27.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img28.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img29.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img30.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img31.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img32.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img33.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img34.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img35.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img36.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img37.png" alt="">
+                            </div>
+                            <div class="trust__slide swiper-slide">
+                                <img loading="lazy" src="@img/trust/trust-img38.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__bottom bottom-block">
+                        <div class="trust__pagination swiper-pagination"></div>
+                        <a target="_blank" class="projects__bot-link button-link">К списку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('html/connect.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>

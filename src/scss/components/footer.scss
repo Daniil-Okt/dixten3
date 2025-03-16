@@ -1,16 +1,11 @@
 .footer {
-
-  padding: rem(20) 0;
-  background: var(--black-color);
-
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  min-height: rem(300);
+  background: var(--temnye-plashki);
+  margin-top: rem(-30);
+  padding-top: rem(50);
   // .footer__container
-  &__container {
-    display: flex;
-    align-items: center;
 
-    @include media-mx(510) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
 }
