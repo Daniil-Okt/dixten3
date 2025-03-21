@@ -8,9 +8,9 @@
   <title>DIXTEN - Готовые решения</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/solutions.min.css?_v=20250320083939">
+  <link rel="stylesheet" href="css/solutions.min.css?_v=20250321113113">
 
-  <script defer="defer" src="js/main.min.js?_v=20250320083939"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250321113113"></script>
 </head>
 
   <body>
@@ -526,7 +526,7 @@
                     </div>
                 </div>
                 <div class="connect__row-bot">
-                    <label class="item-input connect__item-input item-checkbox">
+                    <label class="item-input item-checkbox connect__item-input">
                         <input checked="checked" type="checkbox" name="avtale" class="item-checkbox__input">
                         <div class="item-checkbox__body">
                             <div class="item-checkbox__icon">
@@ -674,7 +674,7 @@
                     <div class="item-input popup-form__item-input">
                         <input type="text" name="email" placeholder="Почта" class="input-text _req popup-form__input _email"> 
                     </div>
-                    <button class="button popup-form__button button-close popup-download__button-send popup-catalog-download__button-send"><span>Отправить</span></button>
+                    <button class="button-close button popup-download__button-send popup-form__button popup-catalog-download__button-send"><span>Отправить</span></button>
                     <label class="item-input popup-form__item-input item-checkbox">
                         <input checked="checked" type="checkbox" name="avtale" class="item-checkbox__input">
                         <div class="item-checkbox__body">
@@ -719,7 +719,7 @@
                     <div class="item-input popup-form__item-input">
                         <input type="text" name="email" placeholder="Почта" class="input-text _req popup-form__input _email"> 
                     </div>
-                    <button class="button popup-form__button button-close popup-download__button-send popup-requisites-download__button-send"><span>Отправить</span></button>
+                    <button class="button-close button popup-download__button-send popup-form__button popup-requisites-download__button-send"><span>Отправить</span></button>
                     <label class="item-input popup-form__item-input item-checkbox">
                         <input checked="checked" type="checkbox" name="avtale" class="item-checkbox__input">
                         <div class="item-checkbox__body">
@@ -764,7 +764,7 @@
                     <div class="item-input popup-form__item-input">
                         <input type="text" name="email" placeholder="Почта" class="input-text _req popup-form__input _email"> 
                     </div>
-                    <button class="button popup-form__button button-close popup-download__button-send popup-present-dowload__button-send"><span>Отправить</span></button>
+                    <button class="button-close button popup-download__button-send popup-form__button popup-present-dowload__button-send"><span>Отправить</span></button>
                     <label class="item-input popup-form__item-input item-checkbox">
                         <input checked="checked" type="checkbox" name="avtale" class="item-checkbox__input">
                         <div class="item-checkbox__body">
@@ -783,6 +783,51 @@
         </div>
     </div>
 </div>
+<div class="popup popup-form popup-download" data-popup="popup-founder" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content">
+            <div class="popup-form__fon">
+                <picture><source srcset="images/popup-form-fon.webp" type="image/webp"><img src="images/popup-form-fon.png" alt=""></picture>
+            </div>
+            <button class="button-close popup__close" type="button">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.45898 1.96252L17.8709 18.3745" stroke="#333D61" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1.45898 18.3744L17.8709 1.96245" stroke="#333D61" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <form action="#" class="popup__body">
+                <h2 class="popup-form__title">
+                    Написать директору
+                </h2>
+                <div class="popup-form__row">
+                    <div class="item-input popup-form__item-input">
+                        <input type="text" name="name" placeholder="Имя" class="input-text _req popup-form__input"> 
+                    </div>
+                    <div class="item-input popup-form__item-input">
+                        <input type="text" name="email" placeholder="Почта" class="input-text _req popup-form__input _email"> 
+                    </div>
+                    <textarea name="descript" placeholder="Описание проекта" name="descript" class="input-text _req popup-form__textarea"></textarea>
+                    <button class="button-close button popup-download__button-send popup-form__button"><span>Отправить</span></button>
+                    <label class="item-input popup-form__item-input item-checkbox">
+                        <input checked="checked" type="checkbox" name="avtale" class="item-checkbox__input">
+                        <div class="item-checkbox__body">
+                            <div class="item-checkbox__icon">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 5L4.11364 8.84401C4.56072 9.39596 5.42462 9.31888 5.76692 8.6965L10 1" stroke="#333D61" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <p>
+                                С <a target="_blank" href="https://dixten.com/dlya-pokupateley/politika-konfidentsialnosti/">соглашением о персональных данных</a> ознакомлен и согласен
+                            </p>
+                        </div>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 
 
 
