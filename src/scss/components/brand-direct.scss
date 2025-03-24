@@ -162,16 +162,19 @@
     }
 
     &__logo-slide {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         height: auto;
-        img {
-            // width: 100%;
+
+        img, picture {
+            display: inline-block;
             width: auto;
             height: auto;
+
             max-width: 100%;
-            max-height: 100%;
+            @include adaptiveClamp(max-height, 67, 42);
+            // margin: auto;
         }
     }
 }
@@ -193,7 +196,7 @@
         @include adaptiveClamp(margin-right, 1, 0);
     }
     @media(max-width:450px){
-        margin-right: rem(-20);
+        margin-right: rem(-20) !important;
     }
     &__wrapper {
     }
@@ -231,7 +234,4 @@
         }
     }
 }
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+

@@ -145,9 +145,14 @@ const aboutSlider = new Swiper('.about__slider', {
 	spaceBetween: 10,
 	slidesPerView: 1,
 	modules: [Pagination, FreeMode],
-	freeMode: true,
+	freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: true, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
 	initialSlide: 2,
 	loop: true,
+
 	autoplay: {
 		delay: 2500,
 		stopOnLastSlide: false,
@@ -159,7 +164,7 @@ const aboutSlider = new Swiper('.about__slider', {
 		    clickable: true,
 		  },
 	breakpoints: {
-		801: {
+		651: {
 			freeMode: false,
 		},
 	}
@@ -170,19 +175,26 @@ const objectSlider = new Swiper('.object__slider', {
   spaceBetween: 10,
   slidesPerView: 'auto',
   modules: [FreeMode],
-  freeMode: true
+  freeMode: true,        // Включение свободного режима
+  freeModeMomentum: true, // Включение инерции
+  freeModeMomentumRatio: 1, // Сила инерции
+  freeModeMomentumBounce: true, // Отскок от краев
+  freeModeSticky: true,  // Остановка точно на краю слайда
 });
 
 const solvingSlide = new Swiper('.solving__slider', {
 	speed: 1400,
 	spaceBetween: 10,
-	slidesPerView: 2, // Количество слайдов в ряду
-	slidesPerGroup: 2, // Прокручиваем по 2 слайда за раз
+	slidesPerView: 2, 
 	modules: [Autoplay, Navigation, Pagination, Grid, FreeMode],
-	freeMode: true,
+	freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: true, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
 	grid: {
 		rows: 2,
-		fill: 'row', // Заполнение по строкам
+		fill: 'row', 
 	},
 	navigation: {
 		prevEl: ".reviews__button-slider-prev",
@@ -195,43 +207,45 @@ const solvingSlide = new Swiper('.solving__slider', {
 	breakpoints: {
 		451: {
 			slidesPerView: 3,
-			slidesPerGroup: 3, 
 			grid: {
 			rows: 2,
 			fill: 'row',
 			},
 		},
 		651: {
+			freeMode: false,
 			slidesPerView: 4,
-			slidesPerGroup: 4, // Прокручиваем по 4 слайда за раз
 			grid: {
 			rows: 2,
 			fill: 'row',
 			},
 		},
 		801: {
+			freeMode: false,
 			slidesPerView: 1, // На экранах шире 800px показываем 1 слайд
-			slidesPerGroup: 1, // Прокручиваем по 1 слайду за раз
 			spaceBetween: 0,
 			grid: {
 			rows: 1, // На экранах шире 800px возвращаемся к одной строке
-			freeMode: false
 			},
 		}
 	},
 });
 
 const projectSlider = new Swiper('.projects__slider', {
-	speed: 1400,
+	speed: 800,
 	spaceBetween: 10,
-	slidesPerView: 1.25, // Количество слайдов в ряду
-	slidesPerGroup: 1, // Прокручиваем по 2 слайда за раз
+	slidesPerView: 1.25,
 	initialSlide: 2,
 	modules: [Autoplay, Navigation, Pagination, Grid, FreeMode],
-	freeMode: true,
+	freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: false, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
+
 	grid: {
 		rows: 1,
-		fill: 'row', // Заполнение по строкам
+		fill: 'row',
 	},
 	navigation: {
 		prevEl: ".projects__slider-prev",
@@ -245,7 +259,6 @@ const projectSlider = new Swiper('.projects__slider', {
 	breakpoints: {
 		401: {
 			slidesPerView: 1.5,
-			slidesPerGroup: 1, 
 			initialSlide: 2,
 			grid: {
 				rows: 1,
@@ -257,7 +270,6 @@ const projectSlider = new Swiper('.projects__slider', {
 		},
 		501: {
 			slidesPerView: 2,
-			slidesPerGroup: 1, 
 			initialSlide: 0,
 			grid: {
 				rows: 2,
@@ -267,10 +279,13 @@ const projectSlider = new Swiper('.projects__slider', {
 				dynamicBullets: false,
 			},
 		},
+		651: {
+			freeMode: false,
+		},
 		769: {
 			slidesPerView: 3,
-			slidesPerGroup: 2, // Прокручиваем по 4 слайда за раз
 			initialSlide: 0,
+			freeMode: false,
 			grid: {
 				rows: 2,
 				fill: 'row',
@@ -280,12 +295,13 @@ const projectSlider = new Swiper('.projects__slider', {
 			},
 		},
 		801: {
-			reeMode: false,
+			initialSlide: 0,
+			freeMode: false,
 		},
 		1151: {
 			slidesPerView: 4,
-			slidesPerGroup: 2, // Прокручиваем по 1 слайду за раз
 			spaceBetween: 21,
+			initialSlide: 0,
 			initialSlide: 0,
 			freeMode: false,
 			grid: {
@@ -299,20 +315,19 @@ const projectSlider = new Swiper('.projects__slider', {
 	},
 });
 
+
+
 const trustSlider = new Swiper('.trust__slider', {
 	speed: 800,
-	spaceBetween: 16,
+	spaceBetween: 30,
 	slidesPerView: 2,
 	modules: [Autoplay, Navigation, FreeMode, Pagination],
-	freeMode: true,
+	freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: true, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
 	loop: true,
-	autoplay: {
-	  delay: 2500,
-	  stopOnLastSlide: false,
-	  disableOnIteration: false,
-	  // Отключаем автоплей по умолчанию
-	  enabled: false, // Автоплей изначально выключен
-	},
 	navigation: {
 	  prevEl: ".trust__slider-prev",
 	  nextEl: ".trust__slider-next"
@@ -323,20 +338,22 @@ const trustSlider = new Swiper('.trust__slider', {
 		    clickable: true,
 		  },
 	breakpoints: {
-	  481: {
+	  401: {
 		slidesPerView: 3,
-		spaceBetween: 24,
+		spaceBetween: 40,
 	  },
-	  601: {
+	  501: {
 		slidesPerView: 4,
-		spaceBetween: 24,
+		spaceBetween: 60,
 	  },
-	  801: {
-		freeMode: false,
-		},
-	  1001: {
+	  651: {
 		slidesPerView: 5,
-		spaceBetween: 48,
+		freeMode: false,
+		spaceBetween: 60,
+		},
+	  1051: {
+		slidesPerView: 6,
+		spaceBetween: 88,
 		freeMode: false,
 	  }
 	},
@@ -365,7 +382,6 @@ function startAutoplayWhenVisible(slider) {
 	}
 }
 
-// Запускаем наблюдение за слайдером
 startAutoplayWhenVisible(trustSlider);
 
 const reviewsSlider = new Swiper('.reviews__slider', {
@@ -373,16 +389,20 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   spaceBetween: 16,
   slidesPerView: 1,
   modules: [Autoplay, Navigation, Pagination, FreeMode],
-  freeMode: true,
   loop: true,
-  initialSlide: 2,
+  initialSlide: 0,
+  freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: true, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
   navigation: {
     prevEl: ".reviews__slider-prev",
     nextEl: ".reviews__slider-next"
   },
   pagination: {
     el: ".reviews__pagination",
-    dynamicBullets: true,
+    // dynamicBullets: true,
     clickable: true,
   },
   breakpoints: {
@@ -390,7 +410,7 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 		slidesPerView: 1.4,
 		spaceBetween: 16,
 	},
-    601: {
+    651: {
 		slidesPerView: 2,
 		spaceBetween: 20,
   	},
@@ -411,6 +431,11 @@ const swiper = new Swiper('.brand-content__slider', {
   slidesPerView: 1.55,
   modules: [Autoplay, Navigation, Pagination, FreeMode],
   initialSlide: 0,
+  freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: true, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
   navigation: {
     prevEl: ".reviews__button-slider-prev",
     nextEl: ".reviews__button-slider-next"
@@ -423,7 +448,7 @@ const swiper = new Swiper('.brand-content__slider', {
 	466: {
 		slidesPerView: 2,
 	},
-	801: {
+	511: {
 		reeMode: false,
 	},
     951: {
@@ -441,6 +466,7 @@ const brandContentLogoSlider = new Swiper('.brand-content__logo-slider', {
   modules: [Autoplay, Navigation, Pagination],
   loop: true,
   initialSlide: 1,
+
   autoplay: {
     delay: 2500,
     stopOnLastSlide: false,
@@ -457,6 +483,53 @@ const brandContentLogoSlider = new Swiper('.brand-content__logo-slider', {
         spaceBetween: 48,
     }
   },
+});
+
+const missionSlider = new Swiper('.mission__slider', {
+	speed: 1400,
+	spaceBetween: 10,
+	slidesPerView: 1.45,
+	modules: [Autoplay, Navigation, FreeMode],
+	initialSlide: 0,
+	freeMode: true,        // Включение свободного режима
+	freeModeMomentum: true, // Включение инерции
+	freeModeMomentumRatio: 1, // Сила инерции
+	freeModeMomentumBounce: true, // Отскок от краев
+	freeModeSticky: true,  // Остановка точно на краю слайда
+	// autoplay: {
+	//   delay: 2500,
+	//   stopOnLastSlide: false,
+	//   disableOnIteration: false,
+	// },
+	navigation: {
+		prevEl: ".mission__slider-prev",
+		nextEl: ".mission__slider-next"
+	  },
+	breakpoints: {
+		521: {
+			slidesPerView: 1.8,
+			spaceBetween: 16,
+			freeMode: true,
+			},
+		651: {
+			freeMode: false,
+		},
+		769: {
+			slidesPerView: 2.5,
+			spaceBetween: 16,
+			freeMode: false,
+			},
+		981: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			freeMode: false,
+			},
+		1151: {
+			freeMode: false,
+			slidesPerView: 3.227,
+			spaceBetween: 20,
+		}
+	},
 });
 
 // const swiper = new Swiper('.swiper', {
@@ -573,7 +646,6 @@ let hiddenSlides = [];
 const initialSlidesOrder = Array.from(slidesSuttonsSolving);
 buttonsSolving.forEach(button => {
   button.addEventListener('click', () => {
-    // Удаляем класс active у всех кнопок
     document.querySelectorAll('.solving__menu-item').forEach(btn => {
       btn.classList.remove('active');
     });
@@ -649,41 +721,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	  });
 	});
-  });
-
-//сохранение пути и скачивание файла
-document.addEventListener('DOMContentLoaded', function() {
-    let currentFilePath = null;
-
-    const downloadButtons = document.querySelectorAll('.catalog__button-download');
-    const popup = document.getElementById('downloadPopup');
-    const sendButton = document.querySelector('.popup-download__button-send');
-
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            currentFilePath = button.getAttribute('data-file');
-        });
-    });
-
-    // Обработчик клика на popup-download__button-send
-    sendButton.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        if (currentFilePath) {
-            const link = document.createElement('a');
-            link.href = currentFilePath;
-            link.download = currentFilePath.split('/').pop(); 
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-    });
-
 });
-
 
 //закрыть меню при открытии модального окна на кнопку
 const bottomMenuButton = document.querySelector('.bottom-menu__button')
@@ -694,3 +732,46 @@ if (bottomMenuButton) {
 		}, 500);
 	})
 }
+
+
+
+    //Функция для настройки скачивания файлов
+    function setupFileDownload(downloadButtonsSelector, sendButtonSelector) {
+        let currentFilePath = null;
+
+        const downloadButtons = document.querySelectorAll(downloadButtonsSelector);
+        const sendButton = document.querySelector(sendButtonSelector);
+
+        if (!downloadButtons.length || !sendButton) {
+            return;
+        }
+
+        downloadButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                currentFilePath = button.getAttribute('data-file');
+            });
+        });
+
+        sendButton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            if (currentFilePath) {
+                const link = document.createElement('a');
+                link.href = currentFilePath;
+                link.download = currentFilePath.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        });
+    }
+
+    //Скачивания для каталога
+    setupFileDownload('.catalog__button-download', '.popup-catalog-download__button-send');
+
+    //Скачивания для реквизитов
+    setupFileDownload('.contacts-item__button-down', '.popup-requisites-download__button-send');
+
+    //Скачивания для презентации
+    setupFileDownload('.about-present-downlod', '.popup-present-dowload__button-send');

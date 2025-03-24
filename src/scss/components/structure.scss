@@ -1,0 +1,100 @@
+.structure {
+    @include adaptiveClamp(padding-top, 150, 90);
+
+    &__container {
+        @media(max-width:920px){
+            max-width: 700px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(27);
+        @media(max-width:920px){
+            text-align: left;
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        @include adaptiveClamp(margin-bottom, 85, 0);
+        @include adaptiveClamp(padding-left, 115, 0);
+        @include adaptiveClamp(padding-right, 115, 0);
+        img {
+            width: 100%;
+        }
+
+        @media(max-width:920px){
+            display: none;
+        }
+    }
+
+    &__row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        @include adaptiveClamp(gap, 40, 0);
+        @media(max-width:920px){
+            grid-template-columns: 1fr;
+            @include adaptiveClamp(gap, 30, 20);
+            @include adaptiveClamp(padding-left, 100, 64);
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: auto;
+                height: 100%;
+                background: url(@img/structure/structure-img-mob.png) no-repeat center center / contain;
+                top:rem(-19);
+                @include adaptiveClamp(left, 50, 13);
+                aspect-ratio: 27 / 389;
+                max-height: rem(389);
+            }
+        }
+    }
+
+    &__item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-weight: 700;
+            @include adaptiveClamp(font-size, 22, 16);
+            line-height: 109%;
+            text-align: center;
+            color: #162842;
+            @include adaptiveClamp(margin-bottom, 10, 5);
+            @media(max-width:1070px){
+                @include adaptiveClamp(font-size, 18, 16);
+                @include adaptiveClamp(margin-bottom, 7, 5);
+            }
+            @media(max-width:920px){
+                @include adaptiveClamp(font-size, 22, 16);
+                @include adaptiveClamp(margin-bottom, 10, 5);
+                text-align: left;
+            }
+        }
+  
+        p {
+            margin-top: auto;
+            font-weight: 500;
+            line-height: 150%;
+            text-align: center;
+            color: #162842;
+            @include adaptiveClamp(font-size, 16, 12);
+            @media(max-width:1070px){
+                @include adaptiveClamp(font-size, 14, 12);
+            }
+            @media(max-width:920px){
+                @include adaptiveClamp(font-size, 16, 12);
+                text-align: left;
+                
+            }
+            @media(max-width:430px){
+                line-height: 120%;
+            }
+        }
+    }
+}

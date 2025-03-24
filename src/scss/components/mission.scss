@@ -1,0 +1,282 @@
+.mission {
+    @include adaptiveClamp(padding-top, 184, 90);
+
+    &__container {
+
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(80);
+        @media(max-width:960px){
+            flex-direction: column;
+            gap: rem(30);
+        }
+    }
+
+    &__left {
+        position: relative;
+        z-index: 1;
+        @include adaptiveClamp(padding-top, 82, 37);
+        @include adaptiveClamp(padding-left, 67, 20);
+        @include adaptiveClamp(padding-bottom, 86, 28);
+        background: linear-gradient(180deg, #f6faff 0%, #dcf0fe 100%);
+        max-width: rem(592);
+        border-radius: 18px;
+        &::before {
+            position: absolute;
+            pointer-events: none;
+            content: '';
+            width: auto;
+            height: 100%;
+            background: url(@img/mission/misson-bac.png) no-repeat center center / contain;
+            top:0;
+            // left: 38%;
+            right: rem(-223);
+            aspect-ratio: 474/413;
+            z-index: -1;
+            @media(max-width:960px){
+                display: none;
+            }
+        }
+        @media(max-width:960px){
+            max-width: 100%;
+            @include adaptiveClamp(padding-right, 67, 20);
+        }
+        @media(max-width:550px){
+            margin-left: rem(-20);
+            margin-right: rem(-20);
+            min-width: calc(100% + 2.5rem);
+        }
+    }
+
+    &__title {
+        @include adaptiveClamp(margin-bottom, 30, 7);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveClamp(gap, 10, 6);
+        margin-right: rem(-31);
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            @include adaptiveClamp(font-size, 16, 14);
+            line-height: 150%;
+            color: var(--tekst);
+        }
+        @media(max-width:960px){
+            margin-right: 0;
+        }
+    }
+    &__right {
+        max-width: rem(662);
+        width: 100%;
+        @media(max-width:960px){
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media(max-width:750px){
+            max-width: 100%;
+        }
+    }
+
+    &__slider {
+        @include adaptiveClamp(margin-top, 144, 90);
+
+        @media(min-width:551px){
+            overflow: hidden;
+        }
+    }
+    &__bottom {
+        margin-top: rem(34);
+        @media(max-width:550px){
+            display: none;
+        }
+    }
+    &__slider-buttons {
+        margin-left: auto;
+
+    }
+}
+
+.item-mission {
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+ 
+    @media(max-width:750px){
+        margin-left: 0 !important;
+    }
+
+    &__letter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveClamp(width, 81, 60);
+        @include adaptiveClamp(min-width, 81, 60);
+        min-height: rem(59);
+        font-weight: 800;
+        font-size: rem(33);
+        text-align: center;
+        color: var(--tekst);
+        border-radius: 7px;
+
+    }
+
+    &__text {
+        flex: auto;
+        height: 100%;
+        @include adaptiveClamp(padding-left, 38, 14);
+        padding-right: rem(20);
+        padding-top: rem(6);
+        padding-bottom: rem(6);
+        font-weight: 600;
+        @include adaptiveClamp(font-size, 16, 14);
+    }
+
+    &__button {
+        width: 100%;
+        height: 100%;
+        flex: auto;
+        height: rem(59);
+        font-weight: 600;
+    }
+
+    &:nth-child(1) {
+        background: var(--svetlye-plashki);
+        max-width: rem(355);
+        @include adaptiveClamp(margin-right, 156, 96);
+        .item-mission__letter {
+            background: #e1f1fe;
+        }
+    }
+    &:nth-child(2) {
+        margin-left: rem(30);
+        background: #d7eeff;
+        max-width: rem(378);
+        @include adaptiveClamp(margin-right, 125, 80);
+        .item-mission__letter {
+            background: #c8e7ff;
+        }
+
+       
+    }
+    &:nth-child(3) {
+        margin-left: rem(60);
+        background: #c3e6ff;
+        max-width: rem(401);
+        @include adaptiveClamp(margin-right, 94, 64);
+        .item-mission__letter {
+            background: #b2dcfd;
+        }
+    }
+    &:nth-child(4) {
+        margin-left: rem(90);
+        background: #d7eeff;
+        max-width: rem(423);
+        @include adaptiveClamp(margin-right, 70, 48);
+        .item-mission__letter {
+            background: #c8e7ff;
+        }
+    }
+    &:nth-child(5) {
+        margin-left: rem(120);
+        background: #c3e6ff;
+        max-width: rem(444);
+        @include adaptiveClamp(margin-right, 46, 32);
+        .item-mission__letter {
+            background: #b2dcfd;
+        }
+    }
+    &:nth-child(6) {
+        margin-left: rem(150);
+        background: #d7eeff;
+        max-width: rem(479);
+        @include adaptiveClamp(margin-right, 20, 16);
+        .item-mission__letter {
+            background: #c8e7ff;
+        }
+    }
+    &:nth-child(7) {
+        margin-left: rem(180);
+        background: linear-gradient(90deg, #f17101 0%, #f6a000 100%);
+        max-width: rem(516);
+        .item-mission__letter {
+            background: #b2dcfd;
+        }
+        .item-mission__text {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+            padding-left: 0 !important;
+        }
+    }
+
+}
+.swiper-wrapper {
+}
+.slide-mission {
+    position: relative;
+    background: var(--temnye-plashki);
+    border-radius: 18px;
+    overflow: hidden;
+
+    @include adaptiveClamp(padding-top, 18, 10);
+    padding-left: rem(20);
+    padding-right: rem(20);
+    @include adaptiveClamp(padding-bottom, 68, 16);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    &::before {
+        position: absolute;
+        content: '';
+        @include adaptiveClamp(width, 263, 175);
+        height: auto;
+        background: url(@img/mission/misson-slide-fon.png) no-repeat center center / contain;
+        @include adaptiveClamp(top, 154, 37);
+        left: 0;
+        pointer-events: none;
+        aspect-ratio: 262 / 298;
+    }
+    &__number {
+        position: relative;
+        z-index: 1;
+        font-weight: 900;
+        // line-height: 16%;
+        color: #1b355a;
+        @include adaptiveClamp(font-size, 148, 67);
+        @include adaptiveClamp(margin-bottom, 50, 19);
+        margin-left: auto;
+        @include adaptiveClamp(margin-right, 16, 10);
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-weight: 700;
+        @include adaptiveClamp(font-size, 32, 16);
+        color: #fff;
+        margin-bottom: rem(20);
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        font-weight: 600;
+        @include adaptiveClamp(font-size, 20, 12);
+        line-height: 120%;
+        color: #fff;
+        @media(max-width:450px){
+            font-weight: 400;
+            line-height: 142%;
+        }
+    }
+
+
+}
+.swiper-slide {
+}

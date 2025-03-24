@@ -56,6 +56,7 @@ h2 {
         left: 0;
         transition: opacity 0.3s ease  0s;
         opacity: 0;
+        border-radius: 7px;
     }
 
     &:hover {
@@ -363,6 +364,33 @@ textarea {
         
             transition: all 0.3s ease  0s;
             opacity: 0;
+        }
+    }
+}
+
+
+.crumb {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    @include adaptiveClamp(margin-bottom, 30, 18);
+
+    svg {
+        @include adaptiveClamp(margin-top, 2.5, 1);
+        @include adaptiveClamp(width, 7, 5);
+        height: auto;
+    }
+
+    a {
+        font-weight: 500;
+        @include adaptiveClamp(font-size, 14, 11);
+        color: #8894af;
+        transition: all 0.3s ease  0s;
+        &:hover {
+            color: #333d61;
+        }
+        &:last-child {
+            pointer-events: none;
         }
     }
 }

@@ -1,0 +1,283 @@
+.contacts {
+    @include adaptiveClamp(padding-top, 60, 24);
+    &__container {
+        @media(max-width:970px){
+            max-width: rem(650);
+        }
+    }
+
+    &__crumb {
+        @include adaptiveClamp(margin-bottom, 30, 23);
+    }
+
+    &__row {
+        display: flex;
+        align-items: start;
+        @include adaptiveClamp(gap, 48, 20);
+        @media(max-width:970px){
+            flex-direction: column;
+            @include adaptiveClamp(gap, 108, 90);
+        }
+    }
+
+    &__left {
+        max-width: rem(735);
+        width: 100%;
+        flex: auto;
+        min-width: rem(500);
+        @media(max-width:970px){
+            min-width: 0;
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        @include adaptiveClamp(margin-bottom, 17, 7);
+    }
+
+    &__sub-text {
+        font-weight: 700;
+        @include adaptiveClamp(font-size, 22, 14);
+        color: var(--tekst);
+        line-height: 122%;
+        max-width: rem(592);
+        @include adaptiveClamp(margin-bottom, 35, 30);
+    }
+
+    &__row-item {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveClamp(gap, 30, 20);
+        @media(max-width:540px){
+            margin-left: rem(-20);
+            margin-right: rem(-20);
+        }
+    }
+
+    &__item {
+  
+    }
+
+    &__right {
+        overflow: clip;
+        position: sticky;
+        top: rem(20);
+        background: var(--temnye-plashki);
+        border-radius: 18px;
+        padding-top: rem(34);
+        @include adaptiveClamp(padding-left, 65, 20);
+        @include adaptiveClamp(padding-right, 65, 20);
+        @include adaptiveClamp(padding-bottom, 63, 41);
+        max-width: rem(617);
+
+        @media(max-width:1150px){
+            @include adaptiveClamp(padding-left, 24, 20);
+            @include adaptiveClamp(padding-right, 24, 20);
+        }
+        @media(max-width:540px){
+            margin-left: rem(-20);
+            margin-right: rem(-20);
+            border-radius: 28px;
+        }
+    }
+    &__right-fon {
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-left: rem(55);
+        padding-right: rem(55);
+        img {
+            width: 100%;
+        }
+        @media(max-width:540px){
+            display: none;
+        }
+    }
+
+    &__form-title {
+        font-weight: 700;
+        @include adaptiveClamp(font-size, 45, 22);
+        color: #fff;
+        @include adaptiveClamp(margin-bottom, 48, 35);
+        line-height: 120%;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 1;
+        .input__file-label {
+            margin-top: rem(9);
+            flex-direction: row-reverse;
+            color: #fff;
+            justify-content: start;
+            font-weight: 600;
+            @include adaptiveClamp(font-size, 18, 16);
+            @include adaptiveClamp(gap, 22, 17);
+            .input__file-button {
+                height: auto;
+                width: rem(31);
+            }
+        }
+        .popup-form__button {
+            @include adaptiveClamp(margin-top, 52, 31);
+        }
+        .item-checkbox {
+            p {
+                color: #fff;
+                font-size: rem(12);
+                margin-top: rem(1);
+            }
+
+            &__icon {
+                background: none;
+                border-color: #fff;
+            }
+        }
+    }
+}
+.crumb {
+}
+.contacts-item {
+    @include adaptiveClamp(padding-left, 41, 23);
+    @include adaptiveClamp(padding-right, 41, 23);
+    @include adaptiveClamp(padding-top, 31, 25);
+    @include adaptiveClamp(padding-bottom, 31, 25);
+    background: var(--svetlye-plashki);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // @include adaptiveClamp(gap, 16, 12);
+    min-height: rem(126);
+    
+    &.two {
+        @include adaptiveClamp(padding-left, 64, 46);
+        @include adaptiveClamp(padding-right, 39, 43);
+    }
+
+    @media(max-width:540px){
+        border-radius: 28px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+
+        img {
+            position: relative;
+            // margin-bottom: auto;
+            
+        }
+        p {
+            font-weight: 600;
+            @include adaptiveClamp(font-size, 18, 16);
+            line-height: 178%;
+            letter-spacing: 0.02em;
+            color: #162842;
+            transition: all 0.3s ease  0s;
+        }   
+    }
+    a.contacts-item__link:hover {
+        p {
+            color: var(--ssylki);
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(28);
+        @media(max-width:580px){
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveClamp(gap, 8, 6);
+        max-width: rem(260);
+        p {
+            font-weight: 400;
+            @include adaptiveClamp(font-size, 16, 14);
+            line-height: 150%;
+            color: #162842;
+  
+            @media(max-width:400px){
+                line-height: 136%;
+            }
+        }
+
+        &.big {
+            max-width: 100%;
+            p {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 144%;
+                color: #162842;
+            }
+
+            a {
+                color: #162842;
+                transition: all 0.3s ease  0s;
+                &:hover {
+                    color: var(--ssylki);
+                }
+            }
+        }
+    }
+
+    &__button-row {
+    }
+
+    &__button-down {
+        display: inline-flex;
+        align-items: center;
+        @include adaptiveClamp(gap, 24, 14);
+        font-size: rem(12);
+        line-height: 142%;
+        color: var(--ssylki);
+        cursor: pointer;
+        transition: all 0.3s ease  0s;
+        span {
+            max-width: rem(82);
+        }
+
+        &:hover{
+            color: #162842;
+        }
+
+
+        .mob {
+            display: none;
+        }
+        @media(max-width:580px){
+            .mob {
+                display: block;
+            }
+            .web {
+                display: none;
+            }
+            span {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+        @include adaptiveClamp(font-size, 18, 16);
+        font-weight: 600;
+        padding-left: rem(22);
+
+        @media(min-width:541px){
+            display: none;
+        }
+
+        .two & {
+            padding-left: 0;
+        }
+    }
+}
