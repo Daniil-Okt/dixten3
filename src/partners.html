@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'DIXTEN - Бренды',
+    'style': 'brand.min.css'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+        <div class="about about-two about-partners">
+            <div class="about__container">
+                <div class="about__content">
+                    <div class="about__body">
+                        <div class="about__crumb crumb">
+                            <a href="index.html">Главная</a>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L1 11" stroke="#8894AF" stroke-linecap="round" />
+                            </svg>
+                            <a href="index.html">Стань партнером</a>
+                        </div>
+                        <h1 class="about__title">
+                            Становись партнером DIXTEN
+                        </h1>
+                        <p class="about__text-up">
+                            и закупай профессиональное звуковое, световое и AV-оборудование со скидками до 40%
+                        </p>
+                        <ul class="about__list">
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>от 50+ поставщиков</span>
+                            </li>
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>100.000+ позиций каталога</span>
+                            </li>
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>800+ торговых марок</span>
+                            </li>
+                            <li class="about__list-item">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 7.26795C16.3333 8.03775 16.3333 9.96225 15 10.7321L7.5 15.0622C6.16666 15.832 4.5 14.8697 4.5 13.3301L4.5 4.66987C4.5 3.13027 6.16667 2.16802 7.5 2.93782L15 7.26795Z" fill="#162842" />
+                                </svg>
+                                <span>Отличные партнерские условия</span>
+                            </li>
+                        </ul>
+                        <div class="about__button-row" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="about__button button" data-type="popup-form-1"><span>Заполнить анкету</span></div>
+                        </div>
+                    </div>
+                    <div class="about-partners__img" data-da=".about__body, 860, 3">
+                        <img src="@img/about/about-partner-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('html/brand-direct.html')
+
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>
