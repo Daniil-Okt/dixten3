@@ -1,6 +1,6 @@
 .connect {
     @include adaptiveClamp(padding-top, 150, 90);
- 
+    
 
 
     &__container {
@@ -17,6 +17,11 @@
         @media(max-width:550px){
             margin-left: rem(-20);
             margin-right: rem(-20);
+        }
+
+
+        .connect-two & {
+            @include adaptiveClamp(padding-bottom, 69, 37.8);
         }
     }
     &__fon {
@@ -36,6 +41,9 @@
         position: relative;
         z-index: 2;
         @include adaptiveClamp(margin-bottom, 65.45, 26.9);
+        .connect-two & {
+            text-align: center;
+        }
     }
 
     &__form {
@@ -83,6 +91,16 @@
 
         @media(max-width:768px){
             grid-template-columns: 1fr;
+        }
+
+
+        .connect-two & {
+            grid-template-columns: 1fr;
+            max-width: rem(573);
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            @include adaptiveClamp(gap, 20, 18);
         }
     }
     &__button {

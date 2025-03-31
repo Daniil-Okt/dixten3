@@ -1,0 +1,112 @@
+.cond {
+    @include adaptiveClamp(padding-top, 154.75, 101);
+
+
+    &__container {
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        @include adaptiveClamp(gap, 65, 0);
+
+        @media(max-width:855px){
+            flex-direction: column;
+            @include adaptiveClamp(gap, 65, 67);
+        }
+    }
+
+    &__left {
+        max-width: rem(644);
+        width: 100%;
+        @media(max-width:855px){
+            max-width: 100%;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        border-radius: 18px;
+        background: linear-gradient(180deg, #f6faff 0%, #dcf0fe 100%);
+        @include adaptiveClamp(padding-left, 21, 16);
+        @include adaptiveClamp(padding-right, 31, 20);
+        @include adaptiveClamp(padding-bottom, 40, 30);
+        @media(max-width:550px){
+            margin-left: rem(-20);
+            margin-right: rem(-20);
+            min-width: calc(100% + 2.5rem);
+        }
+    }
+
+    &__img-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        @include adaptiveClamp(column-gap, 14, 11);
+        row-gap: rem(14);
+        margin-bottom: rem(65);
+        @include adaptiveClamp(margin-bottom, 65, 0);
+        @media(max-width:855px){
+            @include adaptiveClamp(margin-bottom, 66, 65);
+        }
+        @media(max-width:620px){
+            display: flex;
+            flex-wrap: wrap;
+            max-width: rem(480);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__img {
+        margin-top: -32%;
+        img {
+            width: 100%;
+        }
+
+        @media(max-width:620px){
+            margin-top: 0;
+            @include adaptiveClamp(width, 350, 105);
+            &:last-child {
+                display: none;
+            }
+            &:nth-child(1), &:nth-child(2) {
+                margin-top: rem(-27);
+            }
+            &:nth-child(3) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+    }
+
+    &__title {
+        @include adaptiveClamp(margin-bottom, 22, 30);
+    }
+
+    &__text {
+        font-size: 16px;
+        @include adaptiveClamp(font-size, 16, 14);
+        line-height: 150%;
+        color: var(--tekst);   
+        max-width: rem(489); 
+    }
+
+
+    .profit {
+
+        &__list {
+        }
+    
+        &__list-li {
+            line-height: 150%;
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+    
+}
+

@@ -1,0 +1,73 @@
+.relevance {
+    @include adaptiveClamp(padding-top, 67, 90);
+    &__container {
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width:730px){
+            flex-direction: column;
+            gap: rem(46);
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        @include adaptiveClamp(margin-bottom, 51, 30);
+    }
+
+    &__text {
+        display: grid;
+        gap: rem(18);
+        max-width: rem(630);
+        p {
+            font-weight: 400;
+            @include adaptiveClamp(font-size, 16, 14);
+            line-height: 150%;
+            color: var(--tekst);
+        }
+    }
+
+    &__img {    
+        position: relative;
+        @include adaptiveClamp(width, 498, 279);
+        @include adaptiveClamp(min-width, 498, 279);
+        margin-right: rem(-30);
+        img {
+            width: 100%;
+        }
+
+        @media(max-width:730px){
+            @include adaptiveClamp(width, 798, 279);
+            margin-right: 0;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        &::before {
+            position: absolute;
+            content: '';
+            @include adaptiveClamp(width, 456, 250);
+            @include adaptiveClamp(height, 181.4, 116);
+            background: url(@img/relevance/relevance-img-line.svg) no-repeat center center / contain;
+            @include adaptiveClamp(right, 334.5, 180);
+            @include adaptiveClamp(top, 135.5, 67);
+
+            @media(max-width:730px){
+                @include adaptiveClamp(width, 706, 250);
+                @include adaptiveClamp(height, 321.4, 116);
+                @include adaptiveClamp(right, 534.5, 187);
+                @include adaptiveClamp(top, 195.5, 66);
+            }
+        }
+    }
+}
