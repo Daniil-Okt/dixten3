@@ -105,6 +105,12 @@
             b {
                 font-weight: 600;
             }
+
+
+            svg {
+                // @include adaptiveClamp(margin-top, 5, 4);
+                margin-top: rem(4);
+            }
         }
     }
     

@@ -555,7 +555,32 @@
         }
         
     }
+    &__img-text {
+        position: absolute;
+        @include adaptiveClamp(bottom, 22, 16);
+        left: 50%;
+        transform: translateX(-38%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        @include adaptiveClamp(font-size, 14, 8);
+        line-height: 157%;
+        color: #fff;
+        text-align: center;
+        b {
+            font-weight: 700;
+            font-size: 20px;
+            @include adaptiveClamp(font-size, 20, 14);
+            line-height: 100%;
+            text-align: center;
+        }
 
+        @media(max-width:360px){
+            transform: translateX(-40%);
+        }
+    }
     .about__text-up {
         @media(max-width:860px){
             @include adaptiveClamp(margin-bottom, 30, 14);

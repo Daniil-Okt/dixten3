@@ -59,12 +59,19 @@
             grid-template-columns: 1fr;
             gap: 0 !important;
         }
+
     }
 
     &__left {
         display: flex;
         flex-direction: column;
         @include adaptiveClamp(gap, 22, 20);
+
+        .connect-two &:first-child {
+            @media(max-width:768px){
+                @include adaptiveClamp(margin-bottom, 22, 20);
+            }
+        }
     }
 
     &__item-input {
